@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+
+    <style>
+      body{
+        background-color: rgb(0, 0, 0);
+      }
+      .key{
+        background-color:rgb(51, 49, 49) ;
+        color: white;
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        border: none;
+        border-radius: 35px;
+        margin-right: 15px;
+      }
+      .key-2{
+        background-color: rgb(214, 118, 8);
+        color: white;
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        border: none;
+        border-radius: 35px;
+        text-align: center;
+        vertical-align: center;
+        margin-right: 15px;
+      }
+      .clear-key{
+        font-size: 30px;
+        width: 100px;
+        margin-top: 20px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <button onclick="
+      updateCalculation('1');
+      " class="key">1</button>
+
+    <button onclick="
+     updateCalculation('2');
+    " class="key">2</button>
+
+    <button onclick="
+     updateCalculation('3');
+    "class="key">3</button> 
+
+    <button onclick="
+     updateCalculation('+');
+    "class="key-2">+</button>
+
+    </p>
+
+    <p>
+      <button onclick="
+       updateCalculation('4');
+      "class="key">4</button>
+
+    <button onclick="
+     updateCalculation('5');
+    "class="key">5</button>
+
+    <button onclick="
+     updateCalculation('6');
+    "class="key">6</button> 
+
+    <button onclick="
+     updateCalculation('-');
+    "class="key-2">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+       updateCalculation('7');
+      "class="key">7</button>
+
+    <button onclick="
+     updateCalculation('8');
+    "class="key">8</button>
+
+    <button onclick="
+    updateCalculation('9');
+    "class="key">9</button> 
+
+    <button onclick="
+     updateCalculation('*');
+    "class="key-2">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+      updateCalculation('0');
+      "class="key">0</button>
+
+    <button onclick="
+     updateCalculation('.');
+    "class="key">.</button>
+    
+
+        <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+        "class="key-2">=</button>
+
+      <button onclick="
+      updateCalculation('/');
+      "class="key-2">/</button>
+      </p>
+
+      <p>
+      <button onclick="
+      calculation = '';
+      console.log(calculation);
+      " class="clear-key">clear</button>
+          </p>
+
+
+    
+
+    <script>
+      let calculation = '';
+
+      function updateCalculation(value){
+        calculation += value;
+        console.log(calculation);
+      }
+    </script>
+  </body>
+</html>
